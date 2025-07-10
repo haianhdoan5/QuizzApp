@@ -4,7 +4,7 @@
  */
 package com.dha.utils;
 
-import com.dha.bth1.App;
+import com.dha.quizzapp.App;
 import java.io.IOException;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -20,6 +20,7 @@ public class MyStage {
     private Scene scene;
     private MyStage(){
         stage=new Stage();
+        stage.setTitle("Quiz App");
     }
     
     public static MyStage getInstance(){
@@ -30,7 +31,12 @@ public class MyStage {
     
     public void showStage(String fxml) throws IOException{
         if(!stage.isShowing()){
-        scene=new Scene(new FXMLLoader(App.class.getResource(fxml)).load());
+            if(scene==null){
+                scene=new Scene(new FXMLLoader(App.class.getResource(fxml)).load());
+            } else{
+                scene.setRoot(new FXMLLoader(App.class.getResource(fxml)).load());
+            }
+        
         stage.setScene(scene);
         stage.show();
                 

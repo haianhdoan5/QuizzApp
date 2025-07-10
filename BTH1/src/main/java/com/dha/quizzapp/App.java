@@ -1,4 +1,4 @@
-package com.dha.bth1;
+package com.dha.quizzapp;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

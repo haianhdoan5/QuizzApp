@@ -1,4 +1,4 @@
-package com.dha.bth1;
+package com.dha.quizzapp;
 
 import java.io.IOException;
 import javafx.fxml.FXML;
